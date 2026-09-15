@@ -1,7 +1,7 @@
 <?php
 
-echo "Hola mundo";
-echo "Bienvenido";
-echo "Aprendiendo Git y GitHub";
-echo "Prueba final";
-echo "Práctica de Git con SSH";
+echo "Hola mundo<br>";
+echo "Bienvenido<br>";
+echo "Aprendiendo Git y GitHub<br>";
+echo "Prueba final<br>";
+echo "Práctica de Git con SSH<br>";
