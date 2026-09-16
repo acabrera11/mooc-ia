@@ -1,0 +1,158 @@
+main > .container {
+    padding: 70px 15px 20px;
+}
+
+.mooc-page {
+    --mooc-ink: #162432;
+    --mooc-muted: #65727b;
+    --mooc-paper: #f4f0e8;
+    --mooc-coral: #e4775e;
+    --mooc-teal: #176b6d;
+    --mooc-gold: #d3a85c;
+    --mooc-line: rgba(22, 36, 50, 0.14);
+    color: var(--mooc-ink);
+    position: relative;
+    isolation: isolate;
+    padding: 38px 0 54px;
+    background:
+        linear-gradient(rgba(22, 36, 50, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(22, 36, 50, 0.045) 1px, transparent 1px),
+        radial-gradient(circle at 8% 0%, rgba(228, 119, 94, 0.2), transparent 25%),
+        var(--mooc-paper);
+    background-size: 34px 34px, 34px 34px, auto, auto;
+}
+
+.mooc-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 30px 80px rgba(22, 36, 50, 0.16);
+    animation: mooc-rise 700ms ease-out both;
+}
+
+.mooc-intro { padding: clamp(38px, 7vw, 86px); }
+.mooc-eyebrow, .mooc-kicker { margin: 0 0 26px; color: var(--mooc-teal); font: 700 0.7rem/1.2 Arial, sans-serif; letter-spacing: 0.2em; text-transform: uppercase; }
+.mooc-intro h1 { max-width: 620px; margin: 0; font: 400 clamp(3.2rem, 6vw, 6.4rem)/0.9 Georgia, 'Times New Roman', serif; letter-spacing: -0.05em; }
+.mooc-intro h1 span { color: var(--mooc-coral); }
+.mooc-lead { max-width: 500px; margin: 34px 0 0; color: var(--mooc-muted); font: 1rem/1.75 Arial, sans-serif; }
+.mooc-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
+.mooc-button { display: inline-flex; align-items: center; min-height: 48px; padding: 0 21px; border-radius: 2px; font: 700 0.78rem Arial, sans-serif; letter-spacing: 0.02em; text-decoration: none; transition: transform 180ms ease, box-shadow 180ms ease; }
+.mooc-button:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(22, 36, 50, 0.16); }
+.mooc-button-primary { color: #fff; background: var(--mooc-ink); }
+.mooc-button-secondary { color: var(--mooc-teal); border: 1px solid rgba(22, 125, 127, 0.35); }
+
+.mooc-journey { position: relative; padding: 54px 44px; color: #fff; background: linear-gradient(145deg, #1c7775, #123f4b); }
+.mooc-orbit { position: absolute; top: 28px; right: 34px; display: grid; width: 68px; height: 68px; place-items: center; border: 1px solid rgba(255, 255, 255, 0.45); border-radius: 50%; color: #f3d79d; font-size: 1.8rem; animation: mooc-float 4s ease-in-out infinite; }
+.mooc-kicker { color: #f3d79d; }
+.mooc-journey h2 { max-width: 270px; margin: 0 0 14px; font: 400 2.25rem/1.03 Georgia, 'Times New Roman', serif; }
+.mooc-journey-copy { max-width: 280px; margin: 0; color: rgba(255, 255, 255, 0.72); font: 0.88rem/1.65 Arial, sans-serif; }
+.mooc-stats { display: grid; gap: 0; margin-top: 48px; }
+.mooc-stats div { display: flex; justify-content: space-between; padding: 16px 0; border-top: 1px solid rgba(255, 255, 255, 0.2); font: 0.82rem Arial, sans-serif; }
+.mooc-stats div:last-child { border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+.mooc-stats strong { color: #f3d79d; }
+
+.mooc-highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; padding: 38px 8px 0; }
+.mooc-highlights article { position: relative; min-height: 142px; padding: 20px 20px 18px 0; border-top: 1px solid var(--mooc-line); }
+.mooc-highlights article:after { position: absolute; top: -1px; left: 0; width: 46px; height: 2px; background: var(--mooc-coral); content: ''; }
+.mooc-highlights span { color: var(--mooc-teal); font: 700 0.7rem Arial, sans-serif; letter-spacing: 0.12em; }
+.mooc-highlights h2 { margin: 14px 0 8px; font: 400 1.3rem Georgia, 'Times New Roman', serif; }
+.mooc-highlights p { margin: 0; color: var(--mooc-muted); font: 0.84rem/1.6 Arial, sans-serif; }
+
+@keyframes mooc-rise { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes mooc-float { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-7px) rotate(8deg); } }
+
+@media (max-width: 760px) {
+    .mooc-page { padding-top: 14px; }
+    .mooc-shell { grid-template-columns: 1fr; }
+    .mooc-intro { padding: 42px 28px 34px; }
+    .mooc-journey { padding: 38px 28px; }
+    .mooc-highlights { grid-template-columns: 1fr; gap: 4px; padding-top: 24px; }
+}
+
+.footer {
+    background-color: #f5f5f5;
+    font-size: .9em;
+    height: 60px;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    content: '';
+    left: 3px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    margin: 4px 4px 2px 4px;
+    background: transparent;
+}
+
+a.asc:after {
+    border-bottom: solid 7px #212529;
+    border-top-width: 0;
+}
+
+a.desc:after {
+    border-top: solid 7px #212529;
+    border-bottom-width: 0;
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+.nav li > form > button.logout {
+    padding-top: 7px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media(max-width:767px) {
+    .nav li > form > button.logout {
+        display:block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
